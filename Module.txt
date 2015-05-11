@@ -1,0 +1,12 @@
+﻿Name: ShopifyFeed
+AntiForgery: enabled
+Author: Zeta Tech
+Website: http://zeta.com.au
+Version: 1.0
+OrchardVersion: 1.9
+Description: Renders a list of items from a shopify feed
+Features:
+    ShopifyFeed:
+        Description: Renders a list of items from a shopify feed
+		Category: Syndication
+		Dependencies: Orchard.Layouts

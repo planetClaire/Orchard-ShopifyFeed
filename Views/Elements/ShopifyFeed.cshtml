@@ -1,0 +1,17 @@
+﻿@{
+    ShopifyFeed.Elements.ShopifyFeed shopifyFeed = Model.ShopifyFeed;
+    var anyItems = shopifyFeed.Items != null;
+}
+@if (anyItems) {
+    <ul class="shopifyLinks">
+        @foreach (var item in shopifyFeed.Items)
+        {
+        <li>
+            <a href="@item.Url" target="_blank">
+                <img src="@item.ImageUrl" alt="@item.Title" height="202"/>
+                @item.Title - @item.Price
+            </a>
+        </li>
+        }
+    </ul>
+}
