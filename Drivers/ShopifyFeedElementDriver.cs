@@ -36,7 +36,8 @@ namespace ShopifyFeed.Drivers
 
         protected override void OnDisplaying(Elements.ShopifyFeed element, ElementDisplayContext context)
         {
-            var request = WebRequest.Create(element.FeedUrl);
+            var request = (HttpWebRequest)WebRequest.Create(element.FeedUrl);
+            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
             request.Timeout = 5000;
 
             using (var response = request.GetResponse()) {
